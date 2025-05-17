@@ -50,7 +50,7 @@ function CreateLeave() {
             <div class="container-create-leave">
                 <div class="create-leave-box">
                     <h1>Create New Leave</h1>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} autoComplete="off">
                         <div class="input-container">
                             <CiUser class="input-icon"/>
                             <input type="text" placeholder="Employee Name" name="employeeName" onChange={(e) => setEmployeeName(e.target.value)}required/>
