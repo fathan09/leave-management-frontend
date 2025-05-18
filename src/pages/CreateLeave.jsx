@@ -16,7 +16,6 @@ function CreateLeave() {
     const [startDate, setStartDate] = useState("");
     const [endDate, setEndDate] = useState("");
     const [status, setStatus] = useState("");
-    const [responseMessage, setResponseMessage] = useState("");
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -31,7 +30,7 @@ function CreateLeave() {
         }
 
         axios.post("https://leave-management-backend-production.up.railway.app/leave/create", newLeave).then((response) => {
-            setResponseMessage("New Leave Data Is Created Successfully!");
+            console.log("New Leave Data Is Created Successfully!");
         }).catch((err) => {
             if(err.response) {
                 console.log("Response error:", err.response);
@@ -40,7 +39,6 @@ function CreateLeave() {
             } else {
                 console.log("Error:", err.message)
             }
-            setResponseMessage("Error Creating Leave Data");
         });
     };
     return(
