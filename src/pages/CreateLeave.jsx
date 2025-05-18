@@ -32,7 +32,6 @@ function CreateLeave() {
 
         axios.post("https://leave-management-backend-production.up.railway.app/leave/create", newLeave).then((response) => {
             setResponseMessage("New Leave Data Is Created Successfully!");
-            alert(responseMessage)
         }).catch((err) => {
             if(err.response) {
                 console.log("Response error:", err.response);
