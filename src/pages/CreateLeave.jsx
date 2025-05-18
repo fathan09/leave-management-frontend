@@ -42,7 +42,6 @@ function CreateLeave() {
                 console.log("Error:", err.message)
             }
             setResponseMessage("Error Creating Leave Data");
-            alert(responseMessage)
         });
     };
     return(
