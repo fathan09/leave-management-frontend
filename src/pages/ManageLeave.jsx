@@ -69,12 +69,12 @@ function ManageLeave() {
                     onChange={(e) => setSearchStaff(e.target.value)}
                 />
                 <input 
-                    placeholder="Search Start Date (MM/DD/YYYY)"
+                    placeholder="Search Start Date (DD/MM/YYYY)"
                     value={searchStartDate}
                     onChange={(e) => setSearchStartDate(e.target.value)}
                 />
                 <input 
-                    placeholder="Search End Date (MM/DD/YYYY)"
+                    placeholder="Search End Date (DD/MM/YYYY)"
                     value={searchEndDate}
                     onChange={(e) => setSearchEndDate(e.target.value)}
                 />
