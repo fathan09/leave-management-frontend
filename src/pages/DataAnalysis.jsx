@@ -40,7 +40,7 @@ function DataAnalysis() {
   }, []);
 
   const getMonthName = (dateStr) => {
-    const [dd, mm, yyyy] = dateStr.split("/");
+    const [mm, yyyy] = dateStr.split("/");
     const monthIndex = parseInt(mm) - 1;
     return new Date(yyyy, monthIndex).toLocaleString("default", { month: "long" });
   };
