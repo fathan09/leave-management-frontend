@@ -62,11 +62,11 @@ function CreateLeave() {
                         </div>
                         <div class="input-container">
                             <CiCalendarDate class="input-icon"/>
-                            <input type="text" placeholder="Start Date" name="startDate" onChange={(e) => setStartDate(e.target.value)}required/>
+                            <input type="date" placeholder="Start Date" name="startDate" onChange={(e) => setStartDate(e.target.value)}required/>
                         </div>
                         <div class="input-container">
                             <BsCalendarDate class="input-icon"/>
-                            <input type="text" placeholder="End Date" name="endDate" onChange={(e) => setEndDate(e.target.value)}required/>
+                            <input type="date" placeholder="End Date" name="endDate" onChange={(e) => setEndDate(e.target.value)}required/>
                         </div>
                         <div class="input-container">
                             <GrStatusUnknown class="input-icon"/>
