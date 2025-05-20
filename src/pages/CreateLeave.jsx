@@ -20,31 +20,35 @@ function CreateLeave() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        const newLeave = {
-            employeeName,
-            staffId,
-            leaveType,
-            startDate,
-            endDate,
-            status
-        }
+        if(employeeName !== "" && staffId !== "" && leaveType !== "" && startDate !== "" && endDate !== "" && status !== null) {
 
-        axios.post("https://leave-management-backend-production.up.railway.app/leave/create", newLeave).then((response) => {
-            setEmployeeName("");
-            setStaffId("");
-            setLeaveType("");
-            setStartDate("");
-            setEndDate("");
-            setStatus("");
-        }).catch((err) => {
-            if(err.response) {
-                console.log("Response error:", err.response);
-            } else if(err.request) {
-                console.log("Request error:", err.request);
-            } else {
-                console.log("Error:", err.message)
+            const newLeave = {
+                employeeName,
+                staffId,
+                leaveType,
+                startDate,
+                endDate,
+                status
             }
-        });
+            
+            axios.post("https://leave-management-backend-production.up.railway.app/leave/create", newLeave).then((response) => {
+                setEmployeeName("");
+                setStaffId("");
+                setLeaveType("");
+                setStartDate("");
+                setEndDate("");
+                setStatus("");
+            }).catch((err) => {
+                if(err.response) {
+                    console.log("Response error:", err.response);
+                } else if(err.request) {
+                    console.log("Request error:", err.request);
+                } else {
+                    console.log("Error:", err.message)
+                }
+            });
+        }
+        
     };
     return(
         <>
